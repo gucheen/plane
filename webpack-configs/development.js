@@ -5,7 +5,6 @@ var lost = require('lost');
 var postcssImport = require('postcss-import');
 var cssnext = require('postcss-cssnext');
 var cssMixin = require('postcss-mixins');
-var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
 var cssNest = require('postcss-nested');
 //endregion
@@ -45,7 +44,6 @@ module.exports = {
       cssMixin,
       cssnext,
       lost,
-      autoprefixer,
       cssnano({
         zindex: false,
         reduceIdents: false,
