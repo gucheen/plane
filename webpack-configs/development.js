@@ -9,6 +9,7 @@ var cssnano = require('cssnano');
 var cssNest = require('postcss-nested');
 //endregion
 
+var webpack = require('webpack');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -58,6 +59,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'index',
       template: 'src/index.jade'
-    })
-  ]
+    }),
+    new webpack.HotModuleReplacementPlugin()
+  ],
+  devServer: {
+    contentBase: 'public',
+    inline: true,
+    hot: true,
+    progress: true,
+    historyApiFallback: false,
+    proxy: {
+      
+    }
+  },
 };

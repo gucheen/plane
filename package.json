@@ -45,7 +45,7 @@
   },
   "scripts": {
     "test": "npm test",
-    "dev": "NODE_ENV=development webpack-dev-server --inline --content-base src"
+    "dev": "NODE_ENV=development webpack-dev-server"
   },
   "repository": {
     "type": "git",
